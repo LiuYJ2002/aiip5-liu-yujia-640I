@@ -53,7 +53,7 @@ def preprocess_data(df, config):
         print("normalising data")
         scaler = StandardScaler()
         df[numeric_columns] = scaler.fit_transform(df[numeric_columns])
-
+    print(df.head())
     return df
 
 def split_data(df, target_column, type):
