@@ -37,7 +37,7 @@ Follow these steps to set up the project on your local machine:
 ### Step 1: Clone the repository
 
 ```bash
-cd aiip5-liu-yujia-640I
+
 git clone https://github.com/LiuYJ2002/aiip5-liu-yujiai-640I.git
 ```
 Open a virtual environment(optional):
@@ -48,6 +48,7 @@ python -m venv venv
 ### Step 2: Install dependencies
 
 ```bash
+cd aiip5-liu-yujia-640I
 pip install -r requirements.txt
 ```
 
