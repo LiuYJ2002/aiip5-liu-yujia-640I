@@ -30,7 +30,7 @@ def create_model(model_config, X_train, y_train):
     if tuning and 'search_space' in tuning:
         search_type = tuning.get('type', 'grid')  # Default to GridSearch
         search_space = tuning['search_space']
-        cv = tuning.get('cv', 5)  # Cross-validation splits
+        cv = tuning.get('cv', 5)  
 
         if search_type == 'grid':
             search = GridSearchCV(model, search_space, cv=cv, n_jobs=-1)

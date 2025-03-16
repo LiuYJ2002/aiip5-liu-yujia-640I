@@ -6,7 +6,7 @@ import pandas as pd
 
 def preprocess_data(df, config):
     """
-    Preprocess data: Correct data types, handle missing values and duplicate rows, standardise categorical values, encode categorical data
+    Preprocess data: Correct data types, handle missing values and duplicate rows, standardise categorical values, remove outliers, one hot encode categorical data
     """
     # Correct data types
     df['Nutrient N Sensor (ppm)'] = pd.to_numeric(df['Nutrient N Sensor (ppm)'], errors='coerce')
