@@ -1,7 +1,6 @@
 pandas
 numpy
 scikit-learn
-sqlite3
 joblib
 matplotlib
 seaborn
