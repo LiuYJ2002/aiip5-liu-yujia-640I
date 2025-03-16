@@ -1,0 +1,51 @@
+{
+    "data": {
+      "missing": true,
+      "duplicates": true,
+      "outliers": true,
+      "normalise": true
+    },
+    "temperature_model": {
+      "type": "RandomForestRegressor",
+            "params": {
+                "n_estimators": 100,
+                "max_depth": 10
+            },
+            "tuning": {
+                "type": "random",
+                "cv": 3,
+                "n_iter": 20,
+                "search_space": {
+                    "n_estimators": [100, 250, 500],
+                    "max_depth": [10, 20, 30, null],
+                    "min_samples_split": [5, 10],
+                    "min_samples_leaf": [1, 2, 4],
+                    "max_features": ["sqrt", "log2", null],
+                    "bootstrap": [true, false]
+                }
+            }
+    },
+    "plant_stage_model": {
+      "type": "RandomForestClassifier",
+            "params": {
+                "n_estimators": 100,
+                "max_depth": 10
+            },
+            "tuning": {
+                "type": "grid",
+                "cv": 3,
+                "search_space": {
+                    "n_estimators": [100, 250, 500],
+                    "max_depth": [10, 20, 30, null],
+                    "min_samples_split": [5, 10],
+                    "min_samples_leaf": [1, 2, 4],
+                    "max_features": ["sqrt", "log2", null],
+                    "bootstrap": [true, false],
+                    "criterion": ["gini", "entropy"]
+                }
+
+            }
+  
+    }
+}
+  
